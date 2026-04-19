@@ -10,32 +10,31 @@ struct SecondView: View {
     @Environment(\.dismiss) var dismiss
     @State private var isAnimated = false
     @State private var switchPage = false
-//    @State private var first = false
+    //    @State private var first = false
     var body: some View {
         ZStack{
             Spacer()
             Color.red.ignoresSafeArea()
-            
             VStack {
                 HStack {
-                                    Spacer() // Tugmani o'ngga suradi
-                                    
-                                    Button {
-                                        dismiss()
-                                    } label: {
-                                        Image(systemName: "xmark")
-                                            .font(.title2)
-                                            .foregroundColor(.white)
-                                            .padding(10)
-                                            .background(Color.black.opacity(0.3))
-                                            .clipShape(Circle())
-                                    }
-                                }
-                                .padding(.horizontal)
-                                .padding(.top, 10)
-                          
-
-                                Spacer()
+                    Spacer() // Tugmani o'ngga suradi
+                    
+                    Button {
+                        dismiss()
+                    } label: {
+                        Image(systemName: "xmark")
+                            .font(.title2)
+                            .foregroundColor(.white)
+                            .padding(10)
+                            .background(Color.black.opacity(0.3))
+                            .clipShape(Circle())
+                    }
+                }
+                .padding(.horizontal)
+                .padding(.top, 10)
+                
+                
+                Spacer()
                 Spacer()
                 Image(systemName: "phone.fill")
                     .resizable()
@@ -50,9 +49,6 @@ struct SecondView: View {
                 .background(Color.blue)
                 .foregroundColor(.white)
                 .cornerRadius(20)
-                
-                
-                
             }
         }
         
@@ -88,7 +84,6 @@ struct ContentView: View {
                 }
                 .sheet(isPresented: $switchPage) {
                     SecondView()
-                    
                 }
                 .padding()
                 .buttonStyle(.borderedProminent)

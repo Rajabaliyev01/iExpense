@@ -10,7 +10,6 @@ struct ContentView4: View {
         ZStack {
             Image("earth")
                 .resizable()
-                
                 .ignoresSafeArea()
             VStack {
                 Text("Hello, World!")
@@ -22,21 +21,14 @@ struct ContentView4: View {
                     .foregroundStyle(Color.white)
                     .bold()
                     .italic()
-                    Spacer()
+                Spacer()
                 Button("BOS"){
-                   
                 }
-               
                 .padding()
                 .buttonStyle(.glass)
-//                .buttonStyle(.bordered)
-                
-                
-            }
-            
+                //                .buttonStyle(.bordered)
+            } 
         }
-        
-      
     }
 }
 

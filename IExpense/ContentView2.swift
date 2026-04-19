@@ -12,31 +12,24 @@ struct ContentView2: View {
     @State private var string = [String]()
     
     var body: some View {
-        
         NavigationStack {
             NavigationLink("Any types of data") {
                 ContentView()
-                    
-        }
+            }
             ZStack {
                 LinearGradient(colors: [.blue, .black],
                                startPoint: .topLeading,
                                endPoint: .bottomTrailing)
-                    .ignoresSafeArea()
+                .ignoresSafeArea()
                 VStack {
-                    
-                    
                     List {
-                        
                         ForEach($string, id: \.self) { $string in
                             TextField("Data", text: $string)
                                 .listRowBackground(Color.white.opacity(0.6))
                         }
                         .onDelete(perform: removeRows)
                         
-                        
                     }
-                    
                     Button("Add Number : \(numberRows) ") {
                         string.append("\(numberRows + 1)")
                         currentNumber += 1
@@ -46,30 +39,20 @@ struct ContentView2: View {
                     Button("Clear All") {
                         numberRows = 0
                         string.removeAll()
-                        
-                        
                     }
-                    
                 }
                 .scrollContentBackground(.hidden)
             }
             .toolbar {
                 EditButton()
-                    
             }
-            
-        
         }
-        
-        }
-        
+    }
     func removeRows(offsets: IndexSet) {
         string.remove(atOffsets: offsets)
         numberRows -= offsets.count
-        
     }
-    
-    }
+}
 
 #Preview {
     ContentView2()

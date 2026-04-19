@@ -15,13 +15,8 @@ struct AddView: View {
     @State private var amount = 0.0
     var expenses: Expenses
     let types = ["Bussiness", "Personal"]
-    
-   
-    
     var body: some View {
-        
         NavigationStack {
-            
             ZStack {
                 Image("earth")
                     .resizable()
@@ -74,8 +69,6 @@ struct AddView: View {
         UINavigationBar.appearance().scrollEdgeAppearance = appear
     }
 }
-
-
 #Preview {
     AddView(expenses: Expenses())
 }
