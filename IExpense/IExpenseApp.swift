@@ -1,17 +1,17 @@
 //
-//  IExpenseApp.swift
-//  IExpense
+//  iExpenseApp.swift
+//  iExpense
 //
-//  Created by YancharQuyon on 19/04/26.
+//  Created by Rajabaliyev01 on 17/04/26.
 //
 
 import SwiftUI
 
 @main
-struct IExpenseApp: App {
+struct iExpenseApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView3()
         }
     }
 }
